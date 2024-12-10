@@ -1,0 +1,197 @@
+/* Root Variables for Color and Typography */
+:root {
+    --primary-bg: #f6f6f6;
+    /* Light background */
+    --secondary-bg: #fff;
+    /* Section background */
+    --text-color: #333;
+    /* Standard text color */
+    --highlight: #e91e63;
+    /* Highlight color */
+    --footer-bg: #111;
+    /* Footer background */
+    --nav-link-color: #555;
+    --nav-link-hover: #e91e63;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--primary-bg);
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: var(--secondary-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-placeholder {
+    width: 50px;
+    height: 50px;
+    background: var(--highlight);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 0.9rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--nav-link-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--nav-link-hover);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 40px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.hero .highlight {
+    color: var(--highlight);
+}
+
+.hero-image img {
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* About Section */
+.about {
+    background-color: var(--secondary-bg);
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--highlight);
+}
+
+.about p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* Brainchilds Section */
+.brainchilds {
+    background-color: var(--primary-bg);
+    padding: 60px 40px;
+}
+
+.brainchilds h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--highlight);
+    margin-bottom: 40px;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-item h3 {
+    font-size: 1.5rem;
+    color: var(--highlight);
+    margin-bottom: 10px;
+}
+
+.carousel-item p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.carousel-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Diary Section */
+.diary {
+    background-color: var(--secondary-bg);
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.diary h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--highlight);
+}
+
+.diary p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background: var(--footer-bg);
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--highlight);
+}
