@@ -6,13 +6,19 @@
     /* Section background */
     --text-color: #333;
     /* Standard text color */
-    --highlight: #e91e63;
+    --highlight: #39b54a;
     /* Highlight color */
     --footer-bg: #111;
     /* Footer background */
-    --nav-link-color: #555;
-    --nav-link-hover: #e91e63;
+    --nav-link-color: #ddd;
+    --nav-link-hover: #39b54a;
     --font-family: 'Arial', sans-serif;
+    /* Add this line for the specific dark background color */
+    --hero-header-bg: #0d0d0d;
+    --hero-header-gradient: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    --text-animation-color: #39b54a;
+    --philosophy-color: #39b54a;
+    /* Variable for the philosophy quote color */
 }
 
 /* General Reset */
@@ -35,26 +41,27 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background: var(--secondary-bg);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--hero-header-gradient);
+    color: #ffffff;
 }
 
-.logo {
+.header .logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.logo-placeholder {
+.header .logo-placeholder {
     width: 50px;
     height: 50px;
-    background: var(--highlight);
-    color: #fff;
+    background-color: #ffffff;
+    color: #39b54a;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .nav-links {
@@ -80,6 +87,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 80px 40px;
+    background: var(--hero-header-gradient);
 }
 
 .hero-content {
@@ -88,7 +96,7 @@ body {
 
 .hero h1 {
     font-size: 2.5rem;
-    color: var(--text-color);
+    color: #ffffff;
 }
 
 .hero .highlight {
@@ -98,6 +106,13 @@ body {
 .hero-image img {
     max-width: 400px;
     border-radius: 10px;
+}
+
+.animated-text {
+    font-size: 2rem;
+    color: var(--text-animation-color);
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 /* About Section */
@@ -117,6 +132,13 @@ body {
     margin-bottom: 15px;
     line-height: 1.8;
     color: var(--text-color);
+}
+
+.about .philosophy {
+    color: var(--philosophy-color);
+    /* Applying the new philosophy quote color */
+    font-style: italic;
+    /* Ensuring italic style */
 }
 
 /* Brainchilds Section */
@@ -174,24 +196,131 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--footer-bg);
-    color: #fff;
-    text-align: center;
-    padding: 40px;
+    background-color: #1c355e;
+    /* Matches the color scheme of your website */
+    color: #ffffff;
+    padding: 40px 20px;
 }
 
-.footer h2 {
-    font-size: 1.5rem;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #d1d1d1;
+    line-height: 1.5;
     margin-bottom: 20px;
 }
 
+.btn-green {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #ffffff;
+    background-color: #39b54a;
+    /* Matches highlight color */
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-green:hover {
+    background-color: #2d8f3a;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-details ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #d1d1d1;
+}
+
+.contact-details ul li a {
+    color: #39b54a;
+    text-decoration: none;
+}
+
+.contact-details ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
 .social-icons a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 1.5rem;
+    color: #d1d1d1;
+    font-size: 20px;
+    margin-right: 15px;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: var(--highlight);
+    color: #39b54a;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+    .about,
+    .brainchilds,
+    .diary,
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .carousel {
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .carousel-item {
+        min-width: 150px;
+    }
 }

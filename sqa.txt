@@ -1,0 +1,14 @@
+Inconsistent Pricing/Calculation Error
+
+There is a mismatch in price since the prices displayed for items on the product page do not always match the prices in the cart as well as the final checkout total.
+
+Pricing, Calculation
+
+https://glitchygoods.fringecore.sh/cart
+
+
+'Add To Cart' is Broken
+
+Occasionally, items are not correctly displayed on the Checkout page when clicking 'Add to Cart'. This ties to Issue 1, considering,
+
+https://glitchygoods.fringecore.sh/singleproduct/17
