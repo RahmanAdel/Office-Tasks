@@ -13,37 +13,37 @@
     <body>
         <!-- Header Section -->
         <header class="header">
-            <div class="logo">
-                <div class="logo-placeholder">Logo Placeholder</div>
-                <h1>Nuvolyn</h1>
+            <div class="header-container">
+                <!-- Added header container -->
+                <div class="logo">
+                    <img src="/Novulyn/Novulyn Final File/Novulyn-logo.png" alt="Nuvolyn Logo" class="header-logo">
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#aboutMe">About Me</a></li>
+                        <li><a href="#about">The Story</a></li>
+                        <li><a href="#brainchilds">My Brainchilds</a></li>
+                        <li><a href="#diary">Diary</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#aboutMe">About Me</a></li>
-                    <li><a href="#about">The Story</a></li>
-                    <li><a href="#brainchilds">My Brainchilds</a></li>
-                    <li><a href="#diary">Diary</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <!-- End of header container -->
+            <div class="hero-content">
+                <h1>Hello</h1>
+                <div class="animated-text">
+                    <span id="typed-output"></span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/Banner Design 2.png" alt="Rashed Rabby">
+            </div>
         </header>
+
 
         <!-- Main Content -->
         <main>
-            <!-- Hero Section -->
-            <section id="home" class="hero">
-                <div class="hero-content">
-                    <h1>Hello</h1>
-                    <div class="animated-text">
-                        <span id="typed-output"></span>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="placeholder.png" alt="Rashed Rabby">
-                </div>
-            </section>
-
             <!-- About Me Section -->
             <section id="aboutMe" class="about">
                 <h2>About Me</h2>
@@ -59,97 +59,69 @@
                     seek to conquer the
                     unknown - I seek to embrace it, for it holds the keys to the extraordinary.
                     <br><span class="philosophy"><i>Not knowing everything allows me to think freely and imagine beyond
-                    limits - a philosophy that guides both my work and my life.</i></span>
+                            limits - a philosophy that guides both my work and my life.</i></span>
                 </p>
             </section>
 
             <!-- My Brainchilds Section -->
             <section id="brainchilds" class="brainchilds">
                 <h2>My Brainchilds</h2>
-                <div id="brainchildCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="brainchild">
-                                <h3>Eflix.store</h3>
-                                <p>Bangladesh's most trusted digital product solution provider since 2019, delivering
-                                    over 60,000 successful products
-                                    tailored to client needs with unparalleled reliability and service.</p>
-                                <img src="eflix-placeholder.png" alt="Eflix.store">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="brainchild">
-                                <h3>NovulynIT</h3>
-                                <p>Specializes in cutting-edge IT solutions, including WiFi surveys, data center
-                                    management, cellular & 5G networks, and
-                                    EV charging solutions, with expert onsite support.</p>
-                                <img src="novulynit-placeholder.png" alt="NovulynIT">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="brainchild">
-                                <h3>NovulynDigital</h3>
-                                <p>A full-service digital solutions provider offering website design, app development,
-                                    digital marketing, video editing,
-                                    motion graphics, and AI chatbot solutions to elevate business performance.</p>
-                                <img src="novulynDigital-placeholder.png" alt="NovulynDigital">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="brainchild">
-                                <h3>NovulynEdu</h3>
-                                <p>Provides expert educational consultancy for preparing education-related documents,
-                                    academic planning, and navigating
-                                    complex educational systems for students and professionals.</p>
-                                <img src="novulynEdu-placeholder.png" alt="NovulynEdu">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="brainchild">
-                                <h3>NovulynConsultants</h3>
-                                <p>A premier consultancy offering strategic financial and investment advice, and expert
-                                    business setup and legal support
-                                    for companies entering European markets.</p>
-                                <img src="novulynConsultants-placeholder.png" alt="NovulynConsultants">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="brainchild">
-                                <h3>Novulyn Tours</h3>
-                                <p>Curates personalized travel experiences across Asia and Europe, offering seamless
-                                    tour planning, flight bookings, and
-                                    unforgettable adventures tailored to client preferences.</p>
-                                <img src="novulynTours-placeholder.png" alt="NovulynTours">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="brainchild">
-                                <h3>Novulyn Creations</h3>
-                                <p>A photography agency dedicated to visual storytelling, offering professional
-                                    photography services and training to
-                                    bring visions to life with creativity and expertise.</p>
-                                <img src="novulynCreations-placeholder.png" alt="NovulynCreations">
-                            </div>
-                        </div>
-                        <!-- Add more carousel items as needed -->
+                <div class="brainchilds-container">
+                    <div class="brainchild card" data-index="0">
+                        <h3>Eflix.store</h3>
+                        <p>Bangladesh's most trusted digital product solution provider since 2019, delivering
+                            over 60,000 successful products
+                            tailored to client needs with unparalleled reliability and service.</p>
+                        <img src="eflix-placeholder.png" alt="Eflix.store">
                     </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#brainchildCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#brainchildCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    <div class="brainchild card" data-index="1">
+                        <h3>NovulynIT</h3>
+                        <p>Specializes in cutting-edge IT solutions, including WiFi surveys, data center
+                            management, cellular & 5G networks, and
+                            EV charging solutions, with expert onsite support.</p>
+                        <img src="novulynit-placeholder.png" alt="NovulynIT">
+                    </div>
+                    <div class="brainchild card" data-index="2">
+                        <h3>NovulynDigital</h3>
+                        <p>A full-service digital solutions provider offering website design, app development,
+                            digital marketing, video editing,
+                            motion graphics, and AI chatbot solutions to elevate business performance.</p>
+                        <img src="novulynDigital-placeholder.png" alt="NovulynDigital">
+                    </div>
+                    <div class="brainchild" data-index="3">
+                        <h3>NovulynEdu</h3>
+                        <p>Provides expert educational consultancy for preparing education-related documents,
+                            academic planning, and navigating
+                            complex educational systems for students and professionals.</p>
+                        <img src="novulynEdu-placeholder.png" alt="NovulynEdu">
+                    </div>
+                    <div class="brainchild" data-index="4">
+                        <h3>NovulynConsultants</h3>
+                        <p>A premier consultancy offering strategic financial and investment advice, and expert
+                            business setup and legal support
+                            for companies entering European markets.</p>
+                        <img src="novulynConsultants-placeholder.png" alt="NovulynConsultants">
+                    </div>
+                    <div class="brainchild" data-index="5">
+                        <h3>Novulyn Tours</h3>
+                        <p>Curates personalized travel experiences across Asia and Europe, offering seamless
+                            tour planning, flight bookings, and
+                            unforgettable adventures tailored to client preferences.</p>
+                        <img src="novulynTours-placeholder.png" alt="NovulynTours">
+                    </div>
+                    <div class="brainchild" data-index="6">
+                        <h3>Novulyn Creations</h3>
+                        <p>A photography agency dedicated to visual storytelling, offering professional
+                            photography services and training to
+                            bring visions to life with creativity and expertise.</p>
+                        <img src="novulynCreations-placeholder.png" alt="NovulynCreations">
+                    </div>
                 </div>
             </section>
 
             <!-- About Story Section -->
             <section id="about" class="about">
-                <h2>The Story Behind Nuvolyn</h2>
+                <h2>The Story Behind Novulyn</h2>
                 <p>A decade ago would have been the perfect time to begin, but life has its own rhythm, and the
                     second-best time to start
                     is always now. With this belief, we embarked on our journey - a vision shared by a like-minded team,
@@ -174,28 +146,20 @@
 
                     At Novulyn, we're not just building solutions; we're shaping futures, forging connections, and
                     turning dreams into
-                    enduring realities. <br><br><span class="philosophy"">We believe in one simple truth: the best
+                    enduring realities. <br><br><span class="philosophy">We believe in one simple truth: the best
                     journeys are made together.</span> </p>
             </section>
 
             <!-- Diary Section -->
             <section id="diary" class="diary">
                 <h2>Diary</h2>
-                <p>This section holds a special place in my heart, for it is where thoughts, reflections, and ideas come
-                    to life in their
-                    most raw and authentic form. It is not merely a collection of words, but a journey through
-                    perspectives - both mine and
-                    those of my incredible teammates. In this space, I embrace the beauty of diverse viewpoints,
-                    believing that every
-                    thought carries its own light, capable of illuminating paths we have yet to tread.<br>
-
-                    Throughout my journey, I have always sought to create something of my own - a brand, a voice, a
-                    vision. But I believe that
-                    true growth comes not just from one mind, but from the harmony of many. Here, we do not simply share
-                    opinions; we share
-                    insights that transcend individual experience, exploring the vastness of thought and the depths of
-                    possibility. Join us,
-                    as we reflect, connect, and explore together.</p>
+                <p>
+                    <span class="philosophy">This section holds a special place in my heart, for it is where thoughts, reflections,
+                        and ideas come
+                        to life in their most raw and authentic form.
+                    </span>
+                </p>
+                <a href="https://www.example.com/demo-blog" class="read-more-link">Read More</a>
             </section>
         </main>
 
@@ -224,20 +188,11 @@
             </div>
         </footer>
 
+
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        <script>
-            var typed = new Typed("#typed-output", {
-                strings: [
-                    "I'm Rashed Rabby",
-                    "I don't confine myself to a single title - I am a problem solver, innovator, and creator.",
-                    "I specialize in bridging vision and technology to transform ideas into reality."
-                ],
-                typeSpeed: 50,
-                backSpeed: 25,
-                loop: true
-            });
-        </script>
+        <script src="/Novulyn/script.js"></script>
     </body>
 
 </html>
