@@ -181,19 +181,14 @@ body {
     padding: 20px;
     text-align: center;
     opacity: 0;
-    /* Initially set opacity to 0 */
     transform: translateY(30px);
-    /*Initially translate y */
     transition: opacity 0.5s ease, transform 0.5s ease;
     /* Added transition for animation*/
 }
 
 .brainchild.card {
     opacity: 1;
-    /* initially make opacity to 1 for the 1st three cards*/
     transform: translateY(0px);
-    /* initially translate y to 0 for the 1st three cards*/
-
 }
 
 .brainchild h3 {
@@ -211,6 +206,20 @@ body {
 .brainchild img {
     max-width: 100%;
     border-radius: 10px;
+}
+
+.brainchild-logo {
+    max-width: 80px;
+    /* Adjust as needed */
+    max-height: 80px;
+    /* Adjust as needed */
+    display: block;
+    margin-left: auto;
+    /*To make the logo central*/
+    margin-right: auto;
+    /*To make the logo central*/
+    margin-bottom: 10px;
+    /*To create space between img and text*/
 }
 
 /* Diary Section */
@@ -251,6 +260,7 @@ body {
 
 .read-more-link:hover {
     background-color: #2d8f3a;
+    /* Slightly darker green on hover */
 }
 
 /* Footer */
