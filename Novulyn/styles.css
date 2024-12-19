@@ -38,15 +38,12 @@ body {
 /* Header */
 .header {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: column;
     padding: 20px 40px;
     background: var(--hero-header-gradient);
     color: #ffffff;
-    flex-wrap: wrap;
-    position: relative;
     min-height: 450px;
-    /* Added minimal height value */
+    position: relative;
 }
 
 .header .header-container {
@@ -89,6 +86,13 @@ body {
     color: var(--nav-link-hover);
 }
 
+
+.hero-content {
+    max-width: 50%;
+    padding: 40px 0;
+    z-index: 1;
+}
+
 .header .hero-content {
     max-width: 100%;
     padding-left: 0;
@@ -101,15 +105,12 @@ body {
 
 }
 
-.header .hero-image {
-    max-width: 400px;
+.hero-image {
     position: absolute;
-    /* Changed position to absolute */
     top: 200px;
     right: 40px;
-    /* Adjust right position */
-    pointer-events: none;
-    /* Added to make image not clickable */
+    max-width: 400px;
+    z-index: 0;
 }
 
 
@@ -166,60 +167,90 @@ body {
     margin-bottom: 40px;
 }
 
-.brainchilds-container {
-    display: flex;
-    flex-wrap: wrap;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 340px));
+    gap: 25px 80px; /* 25px row gap (vertical), 80px column gap (horizontal) */
     justify-content: center;
-    gap: 20px;
-}
-
-.brainchild {
-    width: calc(33.33% - 20px);
-    /* Three cards per row */
-    background-color: var(--secondary-bg);
-    border-radius: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 20px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    /* Added transition for animation*/
 }
 
-.brainchild.card {
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.brainchild h3 {
-    font-size: 1.5rem;
-    color: var(--highlight);
-    margin-bottom: 10px;
-}
-
-.brainchild p {
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-    color: var(--text-color);
-}
-
-.brainchild img {
-    max-width: 100%;
+.grid-item {
+    background: var(--secondary-bg);
     border-radius: 10px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+    min-height: 320px; /* Set minimum height for consistent card size */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content evenly */
+}
+
+.grid-item .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    padding: 15px 0;
 }
 
 .brainchild-logo {
     max-width: 80px;
-    /* Adjust as needed */
     max-height: 80px;
-    /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.grid-item h3 {
+    color: var(--highlight);
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.grid-item p {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.grid-item h3 {
+    color: var(--highlight);
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.grid-item p {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    max-width: 280px;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.brainchild-logo {
+    max-width: 80px;
+    max-height: 80px;
     display: block;
-    margin-left: auto;
-    /*To make the logo central*/
-    margin-right: auto;
-    /*To make the logo central*/
-    margin-bottom: 10px;
-    /*To create space between img and text*/
+    margin: 0 auto 10px;
 }
 
 /* Diary Section */
@@ -382,10 +413,57 @@ body {
     color: var(--nav-link-hover);
 }
 
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--nav-link-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+#mobile-nav-toggle {
+    display: none;
+}
+
+#mobile-nav-toggle:checked ~ .nav-links {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+#mobile-nav-toggle:checked ~ .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#mobile-nav-toggle:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+#mobile-nav-toggle:checked ~ .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
         align-items: flex-start;
+        padding: 20px;
+    }
+
+    .header-container {
+        position: relative;
     }
 
     .nav-links {
@@ -408,6 +486,62 @@ body {
         margin-top: 20px;
     }
 
+    .hero-content {
+        max-width: 100%;
+        padding: 20px 0;
+    }
+
+    .hero-image {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .grid-container {
+        grid-template-columns: minmax(300px, 400px);
+        gap: 20px; /* Slightly reduced gap for mobile view */
+        padding: 15px;
+    }
+
+    .grid-item p {
+        max-width: 100%;
+    }
+
+    .animated-text {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background: rgba(13, 13, 13, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+
+    #mobile-nav-toggle:checked ~ nav .nav-links {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.4rem;
+        color: white;
+    }
+
     .about,
     .brainchilds,
     .diary,
@@ -422,6 +556,36 @@ body {
 
     .carousel-item {
         min-width: 150px;
+    }
+
+    .hamburger {
+        display: block;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background: var(--hero-header-gradient);
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
     }
 }
 
