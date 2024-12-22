@@ -15,10 +15,12 @@
     --font-family: 'Arial', sans-serif;
     /* Add this line for the specific dark background color */
     --hero-header-bg: #0d0d0d;
-    --hero-header-gradient: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    --hero-header-gradient: linear-gradient(to right, #04192c, #024742, #017659);
     --text-animation-color: #39b54a;
     --philosophy-color: #39b54a;
     /* Variable for the philosophy quote color */
+    --main-gradient: linear-gradient(311deg, #0FA97B 5%, #04192C 60%);
+    --text-color-light: #ffffff;
 }
 
 /* General Reset */
@@ -42,7 +44,8 @@ body {
     padding: 20px 40px;
     background: var(--hero-header-gradient);
     color: #ffffff;
-    min-height: 450px;
+    min-height: 500px; /* Increased from 450px */
+    height: 500px; /* Fixed height */
     position: relative;
 }
 
@@ -126,44 +129,58 @@ body {
     color: var(--text-animation-color);
     font-weight: bold;
     margin-top: 10px;
+    min-height: 80px; /* Fixed height for two lines */
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+/* Main Content Container */
+main {
+    background-image: linear-gradient(311deg, #0FA97B 5%, #04192C 60%);
+    color: var(--text-color-light);
+    min-height: 100%;
+    padding: 40px 0;
 }
 
 /* About Section */
 .about {
-    background-color: var(--secondary-bg);
+    background: none;
+    color: var(--text-color-light);
     padding: 60px 40px;
-    text-align: center;
+    text-align: center; /* Restored center alignment */
 }
 
 .about h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: var(--highlight);
+    color: var(--text-color-light);
 }
 
 .about p {
     margin-bottom: 15px;
     line-height: 1.8;
-    color: var(--text-color);
+    color: var(--text-color-light);
 }
 
 .about .philosophy {
-    color: var(--philosophy-color);
-    /* Applying the new philosophy quote color */
+    color: #ffffff !important;
+    opacity: 0.9;
     font-style: italic;
     /* Ensuring italic style */
 }
 
 /* Brainchilds Section */
 .brainchilds {
-    background-color: var(--primary-bg);
+    background: none;
+    color: var(--text-color-light);
     padding: 60px 40px;
 }
 
 .brainchilds h2 {
     font-size: 2rem;
     text-align: center;
-    color: var(--highlight);
+    color: var(--text-color-light);
     margin-bottom: 40px;
 }
 
@@ -178,7 +195,7 @@ body {
 }
 
 .grid-item {
-    background: var(--secondary-bg);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 10px;
     padding: 35px 30px;
     text-align: center;
@@ -189,6 +206,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Distribute content evenly */
+    color: var(--text-color);
 }
 
 .grid-item .content-wrapper {
@@ -220,6 +238,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--text-color);
 }
 
 .grid-item:hover {
@@ -255,7 +274,8 @@ body {
 
 /* Diary Section */
 .diary {
-    background-color: var(--secondary-bg);
+    background: none;
+    color: var(--text-color-light);
     padding: 60px 40px;
     text-align: center;
 }
@@ -263,18 +283,19 @@ body {
 .diary h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: var(--highlight);
+    color: var(--text-color-light);
 }
 
 .diary p {
-    color: var(--text-color);
+    color: var(--text-color-light);
     font-size: 1rem;
     line-height: 1.6;
 }
 
 .diary .philosophy {
-    color: var(--philosophy-color);
+    color: #ffffff !important;
     font-style: italic;
+    opacity: 0.9;
 }
 
 .read-more-link {
@@ -469,6 +490,7 @@ body {
     .nav-links {
         flex-direction: column;
         margin-top: 10px;
+        background: linear-gradient(to right, #04192c, #024742, #017659);
     }
 
     .nav-links li {
