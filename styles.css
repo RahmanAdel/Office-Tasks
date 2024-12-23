@@ -319,9 +319,8 @@ main {
 .footer {
     background: var(--hero-header-gradient);
     color: #ffffff;
-    padding: 40px 20px;
+    padding: 25px 20px; /* Reduced from 40px to 25px */
     position: relative;
-    /* Added relative positioning */
 }
 
 .footer::before {
@@ -342,10 +341,10 @@ main {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px; /* Reduced from 30px */
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 15px; /* Reduced from 20px */
     /* To give space between the divider and the content*/
     position: relative;
     /*To position the copyright text*/
@@ -355,7 +354,7 @@ main {
     content: '\00A9 2024 Novulyn. All Rights Reserved';
     /* Using HTML entity for copyright symbol */
     position: absolute;
-    bottom: -25px;
+    bottom: -20px; /* Reduced from -25px */
     /* Added to position the copyright text at the bottom*/
     left: 40px;
     font-size: 0.8rem;
@@ -369,16 +368,16 @@ main {
 }
 
 .contact-info h2 {
-    font-size: 24px;
+    font-size: 20px; /* Reduced from 24px */
     color: #ffffff;
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Reduced from 10px */
 }
 
 .contact-info p {
     font-size: 16px;
     color: #d1d1d1;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced from 20px */
 }
 
 .btn-green {
@@ -405,7 +404,7 @@ main {
 }
 
 .contact-details ul li {
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Reduced from 10px */
     font-size: 16px;
     color: #d1d1d1;
 }
@@ -420,7 +419,7 @@ main {
 }
 
 .social-icons {
-    margin-top: 20px;
+    margin-top: 15px; /* Reduced from 20px */
 }
 
 .social-icons a {

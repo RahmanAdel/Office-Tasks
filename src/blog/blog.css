@@ -1,6 +1,13 @@
+:root {
+    --hero-header-gradient: linear-gradient(to right, #04192c, #024742, #017659);
+    --main-gradient: linear-gradient(311deg, #0FA97B 5%, #04192C 60%);
+    --text-color-light: #ffffff;
+    --font-family: 'Arial', sans-serif;
+}
+
 /* Custom CSS on top of Tailwind */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -11,4 +18,97 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Update header gradient */
+header {
+    background: var(--hero-header-gradient) !important;
+}
+
+/* Update hero section gradient */
+.bg-blue-800 {
+    background: var(--hero-header-gradient) !important;
+}
+
+/* Update newsletter section gradient */
+.bg-blue-900 {
+    background: var(--hero-header-gradient) !important;
+}
+
+/* Update footer gradient */
+.bg-gray-800 {
+    background: var(--hero-header-gradient) !important;
+}
+
+/* Main content background */
+.py-16 {
+    background-image: var(--main-gradient);
+}
+
+/* Update blog cards */
+.bg-white {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Update buttons */
+.bg-blue-500 {
+    background-color: #39b54a !important;
+}
+
+.bg-blue-500:hover {
+    background-color: #2d8f3a !important;
+}
+
+/* Update text colors */
+.text-blue-500 {
+    color: #39b54a !important;
+}
+
+.hover\:text-blue-600:hover {
+    color: #2d8f3a !important;
+}
+
+/* Footer height adjustments */
+.py-8 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.gap-8 {
+    gap: 15px !important;
+}
+
+.mb-8 {
+    margin-bottom: 12px !important;
+}
+
+.mb-4 {
+    margin-bottom: 6px !important;
+}
+
+.mt-8 {
+    margin-top: 12px !important;
+}
+
+.pt-8 {
+    padding-top: 12px !important;
+}
+
+.space-y-2 > * + * {
+    margin-top: 6px !important;
+}
+
+.max-w-xs {
+    max-width: 16rem !important;
+}
+
+/* Adjust font sizes for compactness */
+footer .text-xl {
+    font-size: 1.1rem !important;
+}
+
+footer p, 
+footer li {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
 }
