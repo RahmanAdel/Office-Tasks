@@ -356,7 +356,7 @@ main {
     position: absolute;
     bottom: -20px; /* Reduced from -25px */
     /* Added to position the copyright text at the bottom*/
-    left: 40px;
+    left: 0px;
     font-size: 0.8rem;
     /* To make it small*/
     color: #888;
