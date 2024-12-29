@@ -323,6 +323,15 @@ main {
     position: relative;
 }
 
+.fab.fa-twitter {
+    font-family: sans-serif;
+}
+
+.fab.fa-twitter::before {
+    content: "𝕏";
+    font-size: 1.2em;
+}
+
 .footer::before {
     content: '';
     position: absolute;
