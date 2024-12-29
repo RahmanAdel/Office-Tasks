@@ -23,6 +23,10 @@ body {
 /* Update header gradient */
 header {
     background: var(--hero-header-gradient) !important;
+    position: fixed; /* Changed to fixed */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top */
 }
 
 /* Update hero section gradient */
@@ -111,4 +115,185 @@ footer p,
 footer li {
     font-size: 0.9rem !important;
     line-height: 1.4 !important;
+}
+
+/* New Footer Styles */
+.footer {
+    padding: 70px 0;
+    background: var(--hero-header-gradient);
+}
+
+.footer .container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px; /* Increased space before border */
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #39b54a;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.8); /* Changed from #bbbbbb */
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a[href^="mailto:"] {
+    text-transform: lowercase !important;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #04192c;
+    background-color: #ffffff;
+}
+
+.footer .border-t {
+    margin-top: 40px; /* Increased space above border */
+    padding-top: 25px; /* Increased space below border */
+    padding-bottom: 10px; /* Added small padding at bottom */
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer .border-t p {
+    margin: 15px 0 0;
+    padding-bottom: 0; /* Remove bottom padding */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.footer-col p,
+.footer-col li,
+.footer-col a,
+.footer .container p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mobile Menu Styles */
+#mobile-menu {
+    transition: all 0.3s ease;
+}
+
+#mobile-menu.show {
+    display: block !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+
+    .footer .row {
+        gap: 40px;
+    }
+
+    .footer-col {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px;
+    }
+
+    .hero-content {
+        padding: 40px 20px;
+    }
+
+    .py-16 {
+        padding: 40px 15px;
+    }
+
+    .footer-col {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-col h4::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Additional Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
 }

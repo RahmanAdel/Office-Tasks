@@ -7,6 +7,7 @@
         <title>Blog - Your Blog Name</title>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/src/blog/blog.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
 
     <body class="font-sans bg-gray-100">
@@ -14,32 +15,17 @@
         <header class="bg-blue-900 text-white py-4">
             <div class="container mx-auto flex justify-between items-center px-4">
                 <a href="blog.html" class="flex items-center text-xl font-bold">
-                    <img src="/public/Signature-Logo-1.jpg" alt="Diary Logo" 
+                    <img src="/public/New/Novulyn/Transparency.png" alt="Diary Logo" 
                         class="h-12 w-auto max-w-[150px] mr-0"> <!-- Added Tailwind classes for dimensions -->
                 </a>
                 <nav class="hidden md:block space-x-6">
-                    <a href="blog.html" class="hover:text-blue-300 transition duration-300">Home</a>
+                    <a href="/index.html" class="hover:text-blue-300 transition duration-300">Home</a>
                     <a href="#" class="hover:text-blue-300 transition duration-300">About</a>
                     <a href="#" class="hover:text-blue-300 transition duration-300">Services</a>
-                    <a href="https://calendly.com/rashed-rabby1" class="hover:text-blue-300 transition duration-300">Calendly</a>
-                    <a href="/index.html"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Novulyn</a>
+                    <a href="https://calendly.com/rashed-rabby1"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Calendly
+                    </a>
                 </nav>
-                <button id="mobile-menu-button" class="md:hidden">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden bg-blue-900 mt-4">
-                <a href="blog.html" class="block py-2 px-4 hover:bg-blue-800">Home</a>
-                <a href="#" class="block py-2 px-4 hover:bg-blue-800">About</a>
-                <a href="#" class="block py-2 px-4 hover:bg-blue-800">Services</a>
-                <a href="#" class="block py-2 px-4 hover:bg-blue-800">Contact</a>
-                <a href="index.html" class="block py-2 px-4 hover:bg-blue-800">Novulyn</a>
             </div>
         </header>
 
@@ -136,51 +122,36 @@
         </section>
 
         <!-- Footer -->
-        <footer class="bg-gray-800 text-white py-8">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                    <!-- Blog Name Section -->
-                    <div class="text-center md:text-left flex flex-col items-center md:items-start">
-                        <a href="/index.html" class="inline-flex items-center text-xl font-bold mb-4">
-                            <img class="w-8 h-8 mr-2" src="/public/Novulyn-digital-logo.png" alt="Logo">
-                            Novulyn
-                        </a>
-                        <p class="max-w-xs">
-                            At Novulyn, we're not just building solutions; we're shaping futures, forging connections, and
-                            turning dreams into
-                            enduring realities
-                        </p>
-                    </div>
-                    
-                    <!-- Contact Section -->
-                    <div class="text-center flex flex-col items-center">
-                        <p class="font-bold mb-4">CONTACT</p>
-                        <div>
-                            <p>+36-705530-983</p>
-                            <p>contact@mdrasheduzzaman.com</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Socials Section -->
-                    <div class="text-center md:text-right flex flex-col items-center md:items-end">
-                        <p class="font-bold mb-4">Socials</p>
-                        <ul class="space-y-2">
-                            <li><a href="#" class="hover:text-blue-300">Facebook</a></li>
-                            <li><a href="#" class="hover:text-blue-300">Instagram</a></li>
-                            <li><a href="#" class="hover:text-blue-300">Twitter</a></li>
-                            <li><a href="https://www.linkedin.com/in/rashed-rabby1/" class="hover:text-blue-300">LinkedIn</a></li>
-                            <li><a href="#" class="hover:text-blue-300">YouTube</a></li>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:contact@mdrasheduzzaman.com" style="text-transform: lowercase;">contact@mdrasheduzzaman.com</a></li>
+                            <li><a href="tel:+36-705530-983">+36-705530-983</a></li>
+                            <li><a href="https://calendly.com/rashed-rabby1">Schedule a Meeting</a></li>
                         </ul>
                     </div>
-                </div>
-                <div class="border-t border-gray-700 mt-8 pt-8 flex flex-wrap justify-between items-center">
-                    <p class="w-full md:w-auto text-center md:text-left">©2021 Novulyn Copyright. All Right Reserved.
-                    </p>
-                    <div class="w-full md:w-auto text-center md:text-right mt-2 md:mt-0">
-                        <a href="#" class="hover:text-blue-300 mr-4">Legal</a>
-                        <a href="#" class="hover:text-blue-300 mr-4">Terms of Service</a>
-                        <a href="#" class="hover:text-blue-300">Terms of Use</a>
+                    <div class="footer-col">
+                        <h4>LEGAL</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                        </ul>
                     </div>
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/rashed-rabby1/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-white mt-8 pt-8 text-center">
+                    <p>©2024 Novulyn. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
@@ -191,7 +162,7 @@
             const mobileMenu = document.getElementById('mobile-menu');
 
             mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('show');
             });
         </script>
     </body>
