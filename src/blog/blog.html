@@ -10,151 +10,154 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
 
-    <body class="font-sans bg-gray-100">
-        <!-- Header -->
-        <header class="bg-blue-900 text-white py-4">
-            <div class="container mx-auto flex justify-between items-center px-4">
-                <a href="blog.html" class="flex items-center text-xl font-bold">
-                    <img src="/public/New/Novulyn/Transparency.png" alt="Diary Logo" 
-                        class="h-12 w-auto max-w-[150px] mr-0"> <!-- Added Tailwind classes for dimensions -->
-                </a>
-                <nav class="hidden md:block space-x-6">
-                    <a href="/index.html" class="hover:text-blue-300 transition duration-300">Home</a>
-                    <a href="#" class="hover:text-blue-300 transition duration-300">About</a>
-                    <a href="#" class="hover:text-blue-300 transition duration-300">Services</a>
-                    <a href="https://calendly.com/rashed-rabby1"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Calendly
+    <body class="font-sans">
+        <!-- Content Wrapper with main gradient -->
+        <div class="main-wrapper">
+            <!-- Header moved inside wrapper -->
+            <header class="text-white py-4 sticky top-0 z-50 backdrop-blur-sm bg-opacity-90">
+                <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+                    <a href="blog.html" class="flex items-center text-xl font-bold">
+                        <img src="/public/Signature/Signature-Logo-crop.jpg" alt="Diary Logo" 
+                            class="h-12 md:h-12 w-auto max-w-[100px] md:max-w-[150px] mr-0">
                     </a>
-                </nav>
-            </div>
-        </header>
+                    <nav class="w-full md:w-auto flex flex-row flex-wrap justify-center mt-4 md:mt-0 space-x-4">
+                        <a href="/index.html" class="inline-block hover:text-blue-300 transition duration-300 py-2">Home</a>
+                        <a href="#" class="inline-block hover:text-blue-300 transition duration-300 py-2">About</a>
+                        <a href="#" class="inline-block hover:text-blue-300 transition duration-300 py-2">Services</a>
+                        <a href="https://calendly.com/rashed-rabby1"
+                            class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Calendly
+                        </a>
+                    </nav>
+                </div>
+            </header>
 
-        <!-- Hero Section -->
-        <section class="bg-blue-800 py-20 text-center text-white relative">
-            <div class="absolute inset-0 bg-cover bg-center opacity-25"></div>
-            <div class="container mx-auto relative z-10">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Diary</h1>
-                <p class="text-lg md:text-xl mb-8 mt-12">This section holds a special place in my heart, for it is where thoughts, reflections, and
-                ideas come to life in their most raw and authentic form. It is not merely a collection of
-                words, but a journey through perspectives - both mine and those of my incredible
-                teammates. In this space, I embrace the beauty of diverse viewpoints, believing that
-                every thought carries its own light, capable of illuminating paths we have yet to tread. 
-                <br> 
-                <br class="hidden md:block"> Throughout my journey, I have always sought to create something of my own - a brand, a
-                voice, a vision. But I believe that true growth comes not just from one mind, but from the
-                harmony of many. Here, we do not simply share opinions; we share insights that
-                transcend individual experience, exploring the vastness of thought and the depths of
-                possibility. Join us, as we reflect, connect, and explore together..</p>
-            </div>
-        </section>
+            <!-- Hero Section -->
+            <section class="py-20 text-center text-white relative hero-section">
+                <div class="absolute inset-0 bg-cover bg-center opacity-25"></div>
+                <div class="container mx-auto relative z-10">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Diary</h1>
+                    <p class="text-lg md:text-xl mb-8 mt-12">This section holds a special place in my heart, for it is where thoughts, reflections, and
+                    ideas come to life in their most raw and authentic form. It is not merely a collection of
+                    words, but a journey through perspectives - both mine and those of my incredible
+                    teammates. In this space, I embrace the beauty of diverse viewpoints, believing that
+                    every thought carries its own light, capable of illuminating paths we have yet to tread. 
+                    <br> 
+                    <br class="hidden md:block"> Throughout my journey, I have always sought to create something of my own - a brand, a
+                    voice, a vision. But I believe that true growth comes not just from one mind, but from the
+                    harmony of many. Here, we do not simply share opinions; we share insights that
+                    transcend individual experience, exploring the vastness of thought and the depths of
+                    possibility. Join us, as we reflect, connect, and explore together..</p>
+                </div>
+            </section>
 
-        <!-- Blog Posts Section -->
-        <section class="py-16">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap -mx-4">
-                    <!-- Blog Post Card -->
-                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <a href="#">
-                                <img src="/public/Facebook Banner/Novulyn.jpg" alt="Blog Image"
-                                    class="w-full hover:opacity-75 transition duration-300">
-                            </a>
-                            <div class="p-6">
-                                <a href="#" class="text-blue-500 text-sm hover:underline">Category</a>
-                                <h3 class="text-xl font-bold mt-2"><a href="#"
-                                        class="hover:text-blue-600 transition duration-300">Blog Post Title</a></h3>
-                                <p class="text-gray-600 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <a href="#" class="text-blue-500 inline-block mt-4 hover:underline">Read More →</a>
+            <!-- Blog Posts Section -->
+            <section class="py-16">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap -mx-4">
+                        <!-- Blog Post Card -->
+                        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <a href="#">
+                                    <img src="/public/Facebook Banner/Novulyn.jpg" alt="Blog Image"
+                                        class="w-full hover:opacity-75 transition duration-300">
+                                </a>
+                                <div class="p-6">
+                                    <a href="#" class="text-blue-500 text-sm hover:underline">Category</a>
+                                    <h3 class="text-xl font-bold mt-2"><a href="#"
+                                            class="hover:text-blue-600 transition duration-300">Blog Post Title</a></h3>
+                                    <p class="text-gray-600 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <a href="#" class="text-blue-500 inline-block mt-4 hover:underline">Read More →</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Repeat for more blog posts -->
-                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <a href="#">
-                                <img src="/public/Facebook Banner/NOVULYN-Soluations.jpg" alt="Blog Image"
-                                    class="w-full hover:opacity-75 transition duration-300">
-                            </a>
-                            <div class="p-6">
-                                <a href="#" class="text-blue-500 text-sm hover:underline">Category</a>
-                                <h3 class="text-xl font-bold mt-2"><a href="#"
-                                        class="hover:text-blue-600 transition duration-300">Another Blog Post Title</a>
-                                </h3>
-                                <p class="text-gray-600 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <a href="#" class="text-blue-500 inline-block mt-4 hover:underline">Read More →</a>
+                        <!-- Repeat for more blog posts -->
+                        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <a href="#">
+                                    <img src="/public/Facebook Banner/NOVULYN-Soluations.jpg" alt="Blog Image"
+                                        class="w-full hover:opacity-75 transition duration-300">
+                                </a>
+                                <div class="p-6">
+                                    <a href="#" class="text-blue-500 text-sm hover:underline">Category</a>
+                                    <h3 class="text-xl font-bold mt-2"><a href="#"
+                                            class="hover:text-blue-600 transition duration-300">Another Blog Post Title</a>
+                                    </h3>
+                                    <p class="text-gray-600 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <a href="#" class="text-blue-500 inline-block mt-4 hover:underline">Read More →</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                            <a href="#">
-                                <img src="/public/Facebook Banner/Novulyn.jpg" alt="Blog Image"
-                                    class="w-full hover:opacity-75 transition duration-300">
-                            </a>
-                            <div class="p-6">
-                                <a href="#" class="text-blue-500 text-sm hover:underline">Category</a>
-                                <h3 class="text-xl font-bold mt-2"><a href="#"
-                                        class="hover:text-blue-600 transition duration-300">Another Blog Post Title</a>
-                                </h3>
-                                <p class="text-gray-600 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <a href="#" class="text-blue-500 inline-block mt-4 hover:underline">Read More →</a>
+                        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <a href="#">
+                                    <img src="/public/Facebook Banner/Novulyn.jpg" alt="Blog Image"
+                                        class="w-full hover:opacity-75 transition duration-300">
+                                </a>
+                                <div class="p-6">
+                                    <a href="#" class="text-blue-500 text-sm hover:underline">Category</a>
+                                    <h3 class="text-xl font-bold mt-2"><a href="#"
+                                            class="hover:text-blue-600 transition duration-300">Another Blog Post Title</a>
+                                    </h3>
+                                    <p class="text-gray-600 mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <a href="#" class="text-blue-500 inline-block mt-4 hover:underline">Read More →</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Newsletter Section -->
-        <section class="bg-blue-900 py-12 text-white">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold mb-4">Newsletter Subscribe</h2>
-                <form class="flex flex-col md:flex-row justify-center max-w-md mx-auto">
-                    <input type="email" placeholder="Your Email Address"
-                        class="bg-gray-200 text-gray-800 px-4 py-2 rounded-l-md w-full md:w-auto mb-2 md:mb-0 md:mr-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <button type="submit"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md transition duration-300">Subscribe</button>
-                </form>
-            </div>
-        </section>
+            <!-- Newsletter Section -->
+            <section class="py-12 text-white">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl font-bold mb-4">Newsletter Subscribe</h2>
+                    <form class="flex flex-col md:flex-row justify-center max-w-md mx-auto">
+                        <input type="email" placeholder="Your Email Address"
+                            class="bg-gray-200 text-gray-800 px-4 py-2 rounded-l-md w-full md:w-auto mb-2 md:mb-0 md:mr-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button type="submit"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md transition duration-300">Subscribe</button>
+                    </form>
+                </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col">
-                        <h4>Contact</h4>
-                        <ul>
-                            <li><a href="mailto:contact@mdrasheduzzaman.com" style="text-transform: lowercase;">contact@mdrasheduzzaman.com</a></li>
-                            <li><a href="tel:+36-705530-983">+36-705530-983</a></li>
-                            <li><a href="https://calendly.com/rashed-rabby1">Schedule a Meeting</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>LEGAL</h4>
-                        <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Terms of Use</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Follow Us</h4>
-                        <div class="social-links">
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="https://www.linkedin.com/in/rashed-rabby1/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="footer-col">
+                                <h4>Contact</h4>
+                                <ul>
+                                    <li><a href="mailto:contact@mdrasheduzzaman.com" style="text-transform: lowercase;">contact@mdrasheduzzaman.com</a></li>
+                                    <li><a href="tel:+36-705530-983">+36-705530-983</a></li>
+                                    <li><a href="https://calendly.com/rashed-rabby1">Schedule a Meeting</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-col">
+                                <h4>LEGAL</h4>
+                                <ul>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">Terms of Use</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-col">
+                                <h4>Follow Us</h4>
+                                <div class="social-links">
+                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://www.linkedin.com/in/rashed-rabby1/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t border-white mt-8 pt-8 text-center">
+                            <p>©2024 Novulyn. All Rights Reserved.</p>
                         </div>
                     </div>
-                </div>
-                <div class="border-t border-white mt-8 pt-8 text-center">
-                    <p>©2024 Novulyn. All Rights Reserved.</p>
-                </div>
-            </div>
-        </footer>
+                </footer>
+            </section>
+        </div>
 
         <!-- JavaScript for Mobile Menu -->
         <script>

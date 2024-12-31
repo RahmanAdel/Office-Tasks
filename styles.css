@@ -19,7 +19,7 @@
     --text-animation-color: #39b54a;
     --philosophy-color: #39b54a;
     /* Variable for the philosophy quote color */
-    --main-gradient: linear-gradient(311deg, #0FA97B 5%, #04192C 60%);
+    --main-gradient: linear-gradient(311deg, #0FA97B 5%, #04192C 60%); /* Single linear background */
     --text-color-light: #ffffff;
 }
 
@@ -33,7 +33,7 @@
 body {
     font-family: var(--font-family);
     color: var(--text-color);
-    background-color: var(--primary-bg);
+    background: var(--main-gradient); /* Apply single linear background */
     line-height: 1.6;
 }
 
@@ -168,6 +168,11 @@ body {
     min-height: 120px; /* Increased from 80px */
     display: flex;
     align-items: flex-start; /* Changed from center */
+}
+
+.header h1 {
+    font-size: 2.2rem; /* Match the font size of animated-text */
+    color: white; /* Change the color back to white */
 }
 
 @media (max-width: 1200px) {
@@ -318,7 +323,9 @@ main {
 }
 
 .grid-item {
-    background: rgba(255, 255, 255, 0.95);
+    background: transparent; /* Make the card background transparent */
+    color: white; /* Make the text inside the card white */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Add a border for better visibility */
     border-radius: 10px;
     padding: 35px 30px;
     text-align: center;
@@ -329,7 +336,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Distribute content evenly */
-    color: var(--text-color);
+}
+
+.grid-item h3, .grid-item p {
+    color: white; /* Ensure all text inside the card is white */
 }
 
 .grid-item .content-wrapper {
@@ -361,7 +371,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-color);
 }
 
 .grid-item:hover {
@@ -431,6 +440,7 @@ main {
     font-size: 1rem;
     border-radius: 5px;
     transition: background-color 0.3s;
+    margin-top: 20px;
 }
 
 .read-more-link:hover {
@@ -440,17 +450,16 @@ main {
 
 /* Footer */
 .footer {
-    padding: 70px 0;
-    background: var(--hero-header-gradient);
+    padding: 20px 0; /* Decrease padding to reduce height */
 }
 
 .footer-content {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1.8fr; /* Adjusted last column ratio from 1fr to 1.8fr */
-    gap: 60px; /* Increased gap for even spacing */
-    padding: 0 80px;  /* Increased padding for more space on sides */
-    margin-bottom: 40px;
+    grid-template-columns: 6fr 6fr; /* Adjusted last column ratio from 1fr to 1.8fr */
+    gap: 20px; /* Decrease gap for more compact layout */
+    padding: 0 40px;  /* Decrease padding for more compact layout */
+    margin-bottom: 20px; /* Decrease margin-bottom */
 }
 
 .contact-info {
@@ -458,15 +467,15 @@ main {
     text-align: center;
     max-width: 500px; /* Reduced from 600px */
     padding: 0;
-    margin: 0 auto; /* Center the contact info section */
+    margin: 8% auto; /* Center the contact info section */
     width: 100%;
 }
 
 .contact-info h2 {
-    font-size: 18px;
+    font-size: 16px; /* Decrease font size */
     color: #ffffff;
     text-transform: capitalize;
-    margin-bottom: 35px;
+    margin-bottom: 20px; /* Decrease margin-bottom */
     font-weight: 500;
     display: inline-block; /* Added to make border match text width */
     position: relative;
@@ -483,18 +492,18 @@ main {
 }
 
 .contact-info p {
-    font-size: 16px;
+    font-size: 14px; /* Decrease font size */
     color: #ffffff;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Decrease margin-bottom */
     max-width: 400px; /* Added to force line breaks */
-    margin: 0 auto 20px;
+    margin: 0 auto 15px;
 }
 
 .contact-details {
     width: 100%;
     padding: 0 20px;
-    justify-self: end;  /* Align to end of grid cell */
+    justify-self: center;  /* Align to end of grid cell */
     max-width: 210px; /* Increased from 300px */
 }
 
@@ -546,8 +555,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align items to start */
-    margin-bottom: 40px; /* Increased to account for border space */
-    font-size: 16px;
+    margin-bottom: 10px; /* Decrease margin-bottom */
+    font-size: 14px; /* Decrease font size */
     color: #39b54a;
 }
 
@@ -589,12 +598,12 @@ main {
 
 .social-icons a {
     display: inline-block;
-    height: 40px;
-    width: 40px;
+    height: 30px; /* Decrease size */
+    width: 30px; /* Decrease size */
     background-color: rgba(255,255,255,0.2);
     margin: 0; /* Remove default margin */
     text-align: center;
-    line-height: 40px;
+    line-height: 30px; /* Adjust line-height */
     border-radius: 50%;
     color: #ffffff;
     transition: all 0.5s ease;
@@ -729,7 +738,7 @@ main {
     }
 
     .nav-links {
-        flex-direction: column;
+        flex-direction: row;
         margin-top: 10px;
         background: linear-gradient(to right, #04192c, #024742, #017659);
     }
@@ -860,44 +869,6 @@ main {
     }
 }
 
-/* Add this new media query for medium-sized devices */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .grid-container {
-        grid-template-columns: repeat(2, minmax(280px, 320px));
-        gap: 30px 40px;
-        padding: 15px;
-    }
-
-    .header {
-        padding: 20px 30px;
-    }
-
-    .hero-content {
-        max-width: 60%;
-    }
-
-    .hero-image {
-        max-width: 300px;
-        top: 150px;
-        right: 20px;
-    }
-
-    .about,
-    .brainchilds,
-    .diary {
-        padding: 40px 30px;
-    }
-
-    .footer-content {
-        padding: 20px;
-        gap: 20px;
-    }
-
-    .contact-info,
-    .contact-details {
-        min-width: 250px;
-    }
-}
 
 /* Tablet and Small Laptop Styles */
 @media (min-width: 769px) and (max-width: 1199px) {
@@ -964,8 +935,8 @@ main {
     width: 100%;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: 40px;
-    padding-top: 25px;
-    padding-bottom: 10px; /* Added small padding at bottom */
+    padding-top: 15px; /* Decrease padding-top */
+    padding-bottom: 5px; /* Decrease padding-bottom */
     text-align: center;
 }
 
@@ -977,6 +948,7 @@ main {
     color: #ffffff;
     margin: 15px 0 0;
     padding-bottom: 0; /* Remove bottom padding */
+    font-size: 14px; /* Decrease font size */
 }
 
 /* New breakpoint for overlap prevention */

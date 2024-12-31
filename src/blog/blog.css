@@ -20,33 +20,52 @@ body {
     padding: 0 20px;
 }
 
-/* Update header gradient */
+/* Update header gradient to match main gradient */
 header {
-    background: var(--hero-header-gradient) !important;
-    position: fixed; /* Changed to fixed */
+    background: var(--main-gradient) !important;
+    position: relative;
     top: 0; /* Stick to the top */
     width: 100%; /* Full width */
     z-index: 1000; /* Ensure it stays on top */
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
-/* Update hero section gradient */
-.bg-blue-800 {
-    background: var(--hero-header-gradient) !important;
-}
-
-/* Update newsletter section gradient */
-.bg-blue-900 {
-    background: var(--hero-header-gradient) !important;
-}
-
-/* Update footer gradient */
+/* Remove individual section backgrounds */
+.bg-blue-800,
+.bg-blue-900,
 .bg-gray-800 {
-    background: var(--hero-header-gradient) !important;
+    background: transparent !important;
 }
 
 /* Main content background */
 .py-16 {
+    /* background-image removed */
+    margin-top: 0 !important;
+}
+
+.py-20 {
+    margin-top: 0 !important;
+}
+
+.py-12 {
+    margin-top: 0 !important;
+}
+
+/* Add wrapper styles */
+.main-wrapper {
     background-image: var(--main-gradient);
+    min-height: 100vh; /* Updated */
+    color: var(--text-color-light);
+    position: relative;
+}
+
+/* Add overlay for better text readability if needed */
+.hero-section {
+    position: relative;
+    z-index: 1;
+    margin-top: 0; /* Updated */
 }
 
 /* Update blog cards */
@@ -120,7 +139,7 @@ footer li {
 /* New Footer Styles */
 .footer {
     padding: 70px 0;
-    background: var(--hero-header-gradient);
+    background: transparent;
 }
 
 .footer .container {
@@ -235,6 +254,22 @@ footer li {
     display: block !important;
 }
 
+/* Mobile menu styles */
+nav a {
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+    nav a {
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+    
+    nav a:last-child {
+        margin-right: 0;
+    }
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .container {
@@ -275,6 +310,62 @@ footer li {
 
     .social-links {
         justify-content: center;
+    }
+
+    /* Update nav styles for mobile */
+    nav {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        margin: 0.25rem 0;
+        margin: 0.25rem;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust header padding for mobile */
+    header {
+        padding: 0.75rem 0;
+    }
+
+    /* Center the logo container */
+    header .flex {
+        justify-content: center;
+    }
+
+    /* Update footer styles for mobile */
+    .footer .row {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-col {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
     }
 }
 
