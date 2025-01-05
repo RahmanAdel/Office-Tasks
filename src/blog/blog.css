@@ -51,6 +51,8 @@ header {
 
 .py-12 {
     margin-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-top: 100px !important;
 }
 
 /* Add wrapper styles */
@@ -70,7 +72,24 @@ header {
 
 /* Update blog cards */
 .bg-white {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(4, 25, 44, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.bg-white h3 a,
+.bg-white p {
+    color: var(--text-color-light);
+}
+
+.bg-white h3 a {
+    color: var(--text-color-light);
+    transition: all 0.3s ease;
+}
+
+.bg-white h3 a:hover {
+    color: #39b54a;
+    text-shadow: 0 0 8px rgba(57, 181, 74, 0.3);
 }
 
 /* Update buttons */
@@ -206,6 +225,18 @@ footer li {
     padding-left: 8px;
 }
 
+.footer-col h4 a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-col h4 a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
 .footer-col .social-links a {
     display: inline-block;
     height: 40px;
@@ -262,7 +293,6 @@ nav a {
 @media (min-width: 640px) {
     nav a {
         margin-bottom: 0;
-        margin-right: 1rem;
     }
     
     nav a:last-child {
@@ -386,5 +416,36 @@ nav a {
 @media(max-width: 574px) {
     .footer-col {
         width: 100%;
+    }
+}
+
+/* Floating Follow Me Button */
+.floating-follow {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: linear-gradient(135deg, #39b54a 0%, #0FA97B 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.floating-follow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .floating-follow {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
     }
 }

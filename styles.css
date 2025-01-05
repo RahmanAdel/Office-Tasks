@@ -37,16 +37,16 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
+/* Header layout adjustments */
 .header {
     display: flex;
     flex-direction: column;
-    padding: 20px 40px;
-    background: var(--hero-header-gradient);
-    color: #ffffff;
-    min-height: 500px; /* Increased from 450px */
-    height: 500px; /* Fixed height */
+    justify-content: center; /* Center content vertically */
+    min-height: 520px;
     position: relative;
+    padding: 0px 0px; /* Increased top padding to account for fixed header */
+    overflow: hidden;
+    background: var(--hero-header-gradient);
 }
 
 .header .header-container {
@@ -127,37 +127,46 @@ body {
     color: var(--nav-link-hover);
 }
 
-
+/* Hero content positioning */
 .hero-content {
-    max-width: 50%;
-    padding: 40px 0;
-    z-index: 1;
+    max-width: 45%; /* Adjusted to accommodate larger image */
+    padding: 0 40px 0 80px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent;
+    color: var(--text-color-light);
 }
 
 .header .hero-content {
     max-width: 100%;
     margin-top: 0px;
-    padding-top: 0px;
-    padding-bottom: 40px;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
-    padding-right: 40px;
 }
 
+/* Hero image alignment */
 .hero-image {
     position: absolute;
-    top: 200px;
-    right: 40px;
-    max-width: 400px;
-    z-index: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    max-width: 450px; /* Fixed max-width instead of percentage */
+    height: auto;
+    z-index: 1;
 }
 
-
 .header .hero-image img {
-    max-width: 100%;
-    border-radius: 10px;
-    max-height: 300px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
+    object-position: top;
+    border-radius: 0;
+    max-height: none;
+    padding-top: 165px;
 }
 
 .animated-text {
@@ -175,9 +184,55 @@ body {
     color: white; /* Change the color back to white */
 }
 
+/* Hero content text styles */
+.hero-content h1 {
+    font-size: 2.2rem;
+    background: linear-gradient(45deg, #ffffff 30%, #39b54a 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accent-name {
+    background: linear-gradient(45deg, #39b54a, #0FA97B);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.wave-emoji {
+    display: inline-block;
+    -webkit-text-fill-color: initial;
+    font-size: 2.4rem;
+    margin-left: 0.5rem;
+    animation: wave 2s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Responsive adjustments */
 @media (max-width: 1200px) {
+    .header {
+        min-height: 550px;
+    }
     .animated-text {
         font-size: 28px;
+    }
+    .hero-image {
+        right: 40px;
+        max-width: 400px;
     }
 }
 
@@ -201,7 +256,10 @@ body {
     }
 
     .hero-image {
-        display: none;
+        position: static;
+        max-width: 350px;
+        height: auto;
+        margin: 2rem auto;
     }
 }
 
@@ -1158,5 +1216,11 @@ h1 {
         justify-content: center; /* Justify content to the center */
         align-items: center; /* Align items to the center */
     }
+}
+
+/* Remove any margin overrides */
+.hero-content[style] {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
 }
 
