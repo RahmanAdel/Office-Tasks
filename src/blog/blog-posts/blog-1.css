@@ -1,0 +1,417 @@
+:root {
+    --hero-header-gradient: linear-gradient(to right, #04192c, #024742, #017659);
+    --main-gradient: linear-gradient(311deg, #0FA97B 5%, #04192C 60%);
+    --text-color-light: #ffffff;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Custom CSS on top of Tailwind */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Update header gradient to match main gradient */
+header {
+    background: var(--main-gradient) !important;
+    position: relative;
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top */
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Main content background */
+.py-20 {
+    margin-top: 0 !important;
+}
+
+.py-12 {
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-top: 100px !important;
+}
+
+/* Add wrapper styles */
+.main-wrapper {
+    background-image: var(--main-gradient);
+    min-height: 100vh; /* Updated */
+    color: var(--text-color-light);
+    position: relative;
+}
+
+/* Add overlay for better text readability if needed */
+.hero-section {
+    position: relative;
+    z-index: 1;
+    margin-top: 0; /* Updated */
+}
+
+/* Update text colors */
+.text-blue-500 {
+    color: #39b54a !important;
+}
+
+.hover\:text-blue-600:hover {
+    color: #2d8f3a !important;
+}
+
+/* Update buttons */
+.bg-blue-500 {
+    background-color: #39b54a !important;
+}
+
+.bg-blue-500:hover {
+    background-color: #2d8f3a !important;
+}
+
+/* Footer height adjustments */
+.py-8 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.gap-8 {
+    gap: 15px !important;
+}
+
+.mb-8 {
+    margin-bottom: 12px !important;
+}
+
+.mb-4 {
+    margin-bottom: 6px !important;
+}
+
+.mt-8 {
+    margin-top: 12px !important;
+}
+
+.pt-8 {
+    padding-top: 12px !important;
+}
+
+.space-y-2 > * + * {
+    margin-top: 6px !important;
+}
+
+.max-w-xs {
+    max-width: 16rem !important;
+}
+
+/* Adjust font sizes for compactness */
+footer .text-xl {
+    font-size: 1.1rem !important;
+}
+
+footer p, 
+footer li {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+}
+
+/* New Footer Styles */
+.footer {
+    padding: 70px 0;
+    background: transparent;
+}
+
+.footer .container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px; /* Increased space before border */
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #39b54a;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.8); /* Changed from #bbbbbb */
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a[href^="mailto:"] {
+    text-transform: lowercase !important;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col h4 a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-col h4 a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #04192c;
+    background-color: #ffffff;
+}
+
+.footer .border-t {
+    margin-top: 40px; /* Increased space above border */
+    padding-top: 25px; /* Increased space below border */
+    padding-bottom: 10px; /* Added small padding at bottom */
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer .border-t p {
+    margin: 15px 0 0;
+    padding-bottom: 0; /* Remove bottom padding */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.footer-col p,
+.footer-col li,
+.footer-col a,
+.footer .container p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mobile Menu Styles */
+#mobile-menu {
+    transition: all 0.3s ease;
+}
+
+#mobile-menu.show {
+    display: block !important;
+}
+
+/* Mobile menu styles */
+nav a {
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+    nav a {
+        margin-bottom: 0;
+    }
+    
+    nav a:last-child {
+        margin-right: 0;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+
+    .footer .row {
+        gap: 40px;
+    }
+
+    .footer-col {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px;
+    }
+
+    .hero-content {
+        padding: 40px 20px;
+    }
+
+    .py-16 {
+        padding: 40px 15px;
+    }
+
+    .footer-col {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-col h4::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Update nav styles for mobile */
+    nav {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        margin: 0.25rem 0;
+        margin: 0.25rem;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust header padding for mobile */
+    header {
+        padding: 0.75rem 0;
+    }
+
+    /* Center the logo container */
+    header .flex {
+        justify-content: center;
+    }
+
+    /* Update footer styles for mobile */
+    .footer .row {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-col {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+/* Additional Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+/* Floating Follow Me Button */
+.floating-follow {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: linear-gradient(135deg, #39b54a 0%, #0FA97B 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.floating-follow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .floating-follow {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+}

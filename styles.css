@@ -130,7 +130,7 @@ body {
 /* Hero content positioning */
 .hero-content {
     max-width: 45%; /* Adjusted to accommodate larger image */
-    padding: 0 40px 0 80px;
+    padding: 0 80px 0 80px;
     position: relative;
     z-index: 2;
     display: flex;
@@ -333,7 +333,7 @@ main {
 .about {
     background: none;
     color: var(--text-color-light);
-    padding: 60px 40px;
+    padding: 60px 100px;
     text-align: center; /* Restored center alignment */
 }
 
@@ -423,12 +423,14 @@ main {
 
 .grid-item p {
     margin: 0;
+    margin-bottom: 20px;
     width: 100%;
-    text-align: center;
+    text-align: justify;
     flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 280px;
 }
 
 .grid-item:hover {
@@ -440,13 +442,6 @@ main {
     margin-bottom: 15px;
     width: 100%;
     text-align: center;
-}
-
-.grid-item p {
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: center;
-    max-width: 280px;
 }
 
 .grid-item img {
@@ -466,7 +461,7 @@ main {
 .diary {
     background: none;
     color: var(--text-color-light);
-    padding: 60px 40px;
+    padding: 60px 100px;
     text-align: center;
 }
 
