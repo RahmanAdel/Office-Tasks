@@ -157,7 +157,8 @@ footer li {
 
 /* New Footer Styles */
 .footer {
-    padding: 70px 0;
+    padding: auto 0;
+    margin-top: 130px;
     background: transparent;
 }
 
